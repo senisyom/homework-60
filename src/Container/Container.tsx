@@ -1,4 +1,4 @@
-import ChatForm from "../Chat/ChatForm";
+import ChatForm from "../Chat/ChatInput";
 
 const Container = () => {
   return (
