@@ -1,10 +1,9 @@
 import { useState } from "react";
 
 const ChatInput = () => {
+  const [author, setAuthor] = useState("");
+  const [message, setMessage] = useState("");
 
-  const [author, setAuthor] = useState('');
-  const [message, setMessage] = useState('');
-  
   const url = "http://146.185.154.90:8000/messages";
 
   const postRequest = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -24,12 +23,13 @@ const ChatInput = () => {
       }
 
       setMessage("");
+      setAuthor("");
+      
     } catch (e) {
       console.error("Ошибка:", e);
       alert("Произошла ошибка при отправке сообщения.");
     }
   };
-
 
   return (
     <div className="row mt-5 ms-5">
@@ -69,6 +69,6 @@ const ChatInput = () => {
       </form>
     </div>
   );
-}
+};
 
 export default ChatInput;
