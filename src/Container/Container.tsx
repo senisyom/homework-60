@@ -1,10 +1,12 @@
-import ChatForm from "../Chat/ChatInput";
+import ChatInput from "../Chat/ChatInput";
 
 const Container = () => {
   return (
     <div>
-      <ChatForm />
-    </div>
+          <ChatInput />
+          <hr />
+      </div>
+      
   );
 };
 
